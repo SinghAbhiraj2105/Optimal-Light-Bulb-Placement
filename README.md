@@ -21,7 +21,7 @@ The code for Light.m is used to calculate the optimal position of two symmetric 
 
 Mathematical Reasoning
 
-Distance from the Light Source
+Distance from the Light Source:
 
 A light source located at $(x_b,y_b)$ and a point $(x,y)$ on the floor with height H, the distance between them is calculated using:
 
@@ -35,8 +35,10 @@ $R$ = distance from the light source to the floor point,
 $x_b, y_b$ = coordinates of the light source,
 $x,y$ = coordinates of the floor point,
 $H$ = height of the light source above the floor
+ 
 
-Light Intensity
+ 
+Light Intensity:
 
 The project models light intensity using the inverse-square relationship:
 
@@ -70,6 +72,8 @@ $P_1=P_2=150W$
 
 This allows the project to compare different placements of two 150-watt bulbs with the single 300-watt configuration.
 
+
+ 
 Optimization that can be used for any light source
 
 The Light.m code uses a 2D model in which the optimization variable d, is the distance of a light source from the side wall.
