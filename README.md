@@ -74,7 +74,7 @@ This allows the project to compare different placements of two 150-watt bulbs wi
 
 <br>
  
-Optimization that can be used for any light source
+Optimization that can be used for light sources:
 
 The Light.m code uses a 2D model in which the optimization variable d, is the distance of a light source from the side wall.
 
@@ -89,7 +89,9 @@ and
 $$
 P_{\text{midpoint}}=(5,0)
 $$
+
 <br>
+
 The optimization objective is:
 
 $$
