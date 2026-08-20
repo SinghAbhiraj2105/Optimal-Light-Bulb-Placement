@@ -29,9 +29,10 @@ R = sqrt{(x-x_b)^2+(y-y_b)^2+H^2}
 $$
 
 where:
-$R$ = distance from the light source to the floor point
-$x_b, y_b$ = coordinates of the light source
-$x,y$ = coordinates of the floor point
+
+$R$ = distance from the light source to the floor point,
+$x_b, y_b$ = coordinates of the light source,
+$x,y$ = coordinates of the floor point,
 $H$ = height of the light source above the floor
 
 Light Intensity
@@ -44,12 +45,12 @@ $$
 
 where:
 
-$I$ = light intensity in $W/m^2$
-$P$ = power of the light source in watts
+$I$ = light intensity in $W/m^2$,
+$P$ = power of the light source in watts,
 $R$ = distance from the light source to the floor point
 
 
-As the distance from the bulb increases, the modeled intensity decreases according to the inverse-square relationship.
+As the distance from the bulb increases, the intensity decreases according to the inverse-square relationship.
 
 Two-Bulb Configuration
 
@@ -62,15 +63,15 @@ I_{total} =
 $$
 
 For the two-bulb experiment:
-$$
-P_1=P_2=150W
-$$
+
+$P_1$=$P_2$=150W
+
 
 This allows the project to compare different placements of two 150-watt bulbs with the single 300-watt configuration.
 
 Optimization that can be used for any light source
 
-The Light.m code uses a 2D model in which the optimization variable is \(d\), the distance of a light source from the side wall.
+The Light.m code uses a 2D model in which the optimization variable d, is the distance of a light source from the side wall.
 
 The code calculates intensity at:
 
@@ -90,4 +91,4 @@ $$
 d^* = \min_d |I_{\text{corner}}(d) - I_{\text{midpoint}}(d)|
 $$
 
-The MATLAB program evaluates multiple possible values of \(d\) and selects the position that minimizes the difference between the corner and midpoint intensity values.
+The MATLAB program evaluates multiple possible values of d and selects the position that minimizes the difference between the corner and midpoint light intensity values.
