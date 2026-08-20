@@ -20,16 +20,21 @@ The code for Light.m is used to calculate the optimal position of any light bulb
 
 Mathematical Reasoning
 
-1. Distance from the Light Source
+Distance from the Light Source
 
-For a light source located at \((x_b,y_b)\) and a point \((x,y)\) on the floor, the distance between them is calculated using:
+A light source located at $(x_b,y_b)$ and a point $(x,y)$ on the floor with height H, the distance between them is calculated using:
 
-\[
-R =
-\sqrt{(x-x_b)^2+(y-y_b)^2+H^2}
-\]
+$$
+R = sqrt{(x-x_b)^2+(y-y_b)^2+H^2}
+$$
 
-2. Light Intensity
+where:
+$R$ = distance from the light source to the floor point
+$x_b, y_b$ = coordinates of the light source
+$x,y$ = coordinates of the floor point
+$H$ = height of the light source above the floor
+
+Light Intensity
 
 The project models light intensity using the inverse-square relationship:
 
@@ -39,61 +44,52 @@ $$
 
 where:
 
-- \(I\) = modeled light intensity
-- \(P\) = bulb power in watts
-- \(R\) = distance between the bulb and the point on the floor
+$I$ = light intensity in $W/m^2$
+$P$ = power of the light source in watts
+$R$ = distance from the light source to the floor point
+
 
 As the distance from the bulb increases, the modeled intensity decreases according to the inverse-square relationship.
 
-3. Two-Bulb Configuration
+Two-Bulb Configuration
 
 For two light sources, the intensity contributions from both bulbs are combined:
 
-\[
+$$
 I_{\text{total}}
 =
 \frac{P_1}{4\pi R_1^2}
 +
 \frac{P_2}{4\pi R_2^2}
-\]
+$$
 
 For the two-bulb experiment:
 
-\[
-P_1=P_2=150\,W
-\]
+$$
+P_1=P_2=150$W$
+$$
 
 This allows the project to compare different placements of two 150-watt bulbs with the single 300-watt configuration.
 
-4. Optimization
+Optimization that can be used for any light source
 
-The `Light.m` program uses a simplified 2D model in which the light sources are positioned symmetrically:
+The Light.m code uses a 2D model in which the optimization variable is \(d\), the distance of a light source from the side wall.
 
-\[
-L_1=(d,5)
-\]
+The code calculates intensity at:
 
-\[
-L_2=(10-d,5)
-\]
-
-The optimization variable is \(d\), the distance of a light source from the side wall.
-
-The program calculates intensity at:
-
-\[
+$$
 P_{\text{corner}}=(0,0)
-\]
+$$
 
 and
 
-\[
+$$
 P_{\text{midpoint}}=(5,0)
-\]
+$$
 
 The optimization objective is:
 
-\[
+$$
 d^*
 =
 \arg\min_d
@@ -102,6 +98,6 @@ I_{\text{corner}}(d)
 -
 I_{\text{midpoint}}(d)
 \right|
-\]
+$$
 
 The MATLAB program evaluates multiple possible values of \(d\) and selects the position that minimizes the difference between the corner and midpoint intensity values.
