@@ -54,8 +54,9 @@ $R$ = distance from the light source to the floor point
 
 
 As the distance from the bulb increases, the intensity decreases according to the inverse-square relationship.
+
 <br>
-Two-Bulb Configuration
+
 
 For two light sources, the intensity contributions from both bulbs are combined:
 
