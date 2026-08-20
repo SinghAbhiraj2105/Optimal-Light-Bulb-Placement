@@ -33,9 +33,9 @@ R =
 
 The project models light intensity using the inverse-square relationship:
 
-\[
+$$
 I = \frac{P}{4\pi R^2}
-\]
+$$
 
 where:
 
