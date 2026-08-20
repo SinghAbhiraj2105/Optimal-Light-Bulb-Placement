@@ -56,17 +56,14 @@ Two-Bulb Configuration
 For two light sources, the intensity contributions from both bulbs are combined:
 
 $$
-I_{\text{total}}
-=
-\frac{P_1}{4\pi R_1^2}
-+
+I_{total} =
+\frac{P_1}{4\pi R_1^2} +
 \frac{P_2}{4\pi R_2^2}
 $$
 
 For the two-bulb experiment:
-
 $$
-P_1=P_2=150$W$
+P_1=P_2=150W
 $$
 
 This allows the project to compare different placements of two 150-watt bulbs with the single 300-watt configuration.
@@ -90,14 +87,7 @@ $$
 The optimization objective is:
 
 $$
-d^*
-=
-\arg\min_d
-\left|
-I_{\text{corner}}(d)
--
-I_{\text{midpoint}}(d)
-\right|
+d^* = \min_d |I_{\text{corner}}(d) - I_{\text{midpoint}}(d)|
 $$
 
 The MATLAB program evaluates multiple possible values of \(d\) and selects the position that minimizes the difference between the corner and midpoint intensity values.
