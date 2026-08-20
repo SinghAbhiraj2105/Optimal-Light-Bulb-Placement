@@ -25,7 +25,7 @@ Distance from the Light Source
 A light source located at $(x_b,y_b)$ and a point $(x,y)$ on the floor with height H, the distance between them is calculated using:
 
 $$
-R = sqrt{(x-x_b)^2+(y-y_b)^2+H^2}
+R = \sqrt{(x-x_b)^2+(y-y_b)^2+H^2}
 $$
 
 where:
@@ -64,7 +64,7 @@ $$
 
 For the two-bulb experiment:
 
-$P_1$=$P_2$=150W
+$P_1=P_2=150W$
 
 
 This allows the project to compare different placements of two 150-watt bulbs with the single 300-watt configuration.
