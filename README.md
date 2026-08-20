@@ -36,7 +36,7 @@ $x_b, y_b$ = coordinates of the light source,
 $x,y$ = coordinates of the floor point,
 $H$ = height of the light source above the floor
  
-
+<br>
  
 Light Intensity:
 
@@ -54,7 +54,7 @@ $R$ = distance from the light source to the floor point
 
 
 As the distance from the bulb increases, the intensity decreases according to the inverse-square relationship.
-
+<br>
 Two-Bulb Configuration
 
 For two light sources, the intensity contributions from both bulbs are combined:
@@ -72,7 +72,7 @@ $P_1=P_2=150W$
 
 This allows the project to compare different placements of two 150-watt bulbs with the single 300-watt configuration.
 
-
+<br>
  
 Optimization that can be used for any light source
 
@@ -89,7 +89,7 @@ and
 $$
 P_{\text{midpoint}}=(5,0)
 $$
-
+<br>
 The optimization objective is:
 
 $$
